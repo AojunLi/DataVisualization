@@ -1,0 +1,26 @@
+---
+title: "visdat"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+library(palmerpenguins)
+library(visdat)
+```
+
+### Visualize dataframe
+
+```{r vis_dat}
+visdat::vis_dat(penguins)
+```
+
+### Visualize missing data
+```{r vis_miss}
+visdat::vis_miss(penguins)
+
+# cluster the missingness
+visdat::vis_miss(penguins, cluster = TRUE)
+
+# arrange the columns by most missingness
+visdat::vis_miss(penguins, sort_miss = TRUE)
+```

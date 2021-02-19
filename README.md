@@ -8,7 +8,7 @@
 
 - description of [palmerpenguins](https://allisonhorst.github.io/palmerpenguins/articles/intro.html)
 
-## [visdata](https://github.com/ropensci/visdat)
+## [visdata](https://github.com/ropensci/visdathttps://github.com/ropensci/visdat)
 
 - visualize dataframe using visdata 
 
