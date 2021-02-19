@@ -6,6 +6,7 @@ output: html_document
 ```{r setup, include=FALSE}
 library(palmerpenguins)
 library(visdat)
+library(tidyverse)
 ```
 
 ### Visualize dataframe
@@ -24,3 +25,16 @@ visdat::vis_miss(penguins, cluster = TRUE)
 # arrange the columns by most missingness
 visdat::vis_miss(penguins, sort_miss = TRUE)
 ```
+
+### Compare dataframes with <span style="color: red;">same dimension</span>.
+```{r vis_compare}
+# change penguins data for comparison
+penguins_diff <- penguins %>%
+  dplyr::mutate(year = 2007L)
+
+# compare dataframes
+visdat::vis_compare(penguins, penguins_diff)
+```
+
+### Further reading
+- naniar package for missing values: https://github.com/njtierney/naniar
