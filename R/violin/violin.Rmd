@@ -1,0 +1,26 @@
+---
+title: "Violin Plot"
+output: html_document
+---
+
+
+```{r setup, include=FALSE}
+# change figure resolution
+knitr::opts_chunk$set(dpi=300)
+
+library(palmerpenguins)
+library(ggplot2)
+```
+
+### Violin plot with ggplot
+```{r vis_vio, warning=FALSE}
+violin <- ggplot(data = penguins) +
+  geom_violin(aes(x = species, 
+                  y = bill_length_mm, 
+                  fill = island)) 
+
+violin
+```
+
+### Notes
+- **Violins** are particularly adapted when the amount of **data is huge** and showing individual observations gets impossible. For **small datasets**, a **boxplot with jitter** is probably a better option since it really shows all the information.

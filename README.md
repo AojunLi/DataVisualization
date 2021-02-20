@@ -8,8 +8,11 @@
 
 - description of [palmerpenguins](https://allisonhorst.github.io/palmerpenguins/articles/intro.html)
 
-## Visualize dataframe
+## Graph gallery
 
-- [visdata](https://github.com/ropensci/visdat)
+- Visualize dataframe
 
+  - [visdata](https://github.com/ropensci/visdat)
+  
+- Violin Chart
 

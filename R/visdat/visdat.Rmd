@@ -4,6 +4,9 @@ output: html_document
 ---
 
 ```{r setup, include=FALSE}
+# change figure resolution
+knitr::opts_chunk$set(dpi=300)
+
 library(palmerpenguins)
 library(visdat)
 library(tidyverse)
