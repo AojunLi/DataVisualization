@@ -36,5 +36,23 @@ penguins_diff <- penguins %>%
 visdat::vis_compare(penguins, penguins_diff)
 ```
 
+### Visualize certain conditions
+```{r vis_expect}
+# check dataframe
+visdat::vis_expect(penguins, ~.x >= 50)
+
+# check variable
+visdat::vis_expect(penguins["bill_length_mm"], ~.x >= 50)
+```
+
+### Visualize correlation
+```{r vis_cor}
+# create dataframe with numeric values
+penguins_num <- penguins %>% 
+  dplyr::select(bill_length_mm, bill_depth_mm, flipper_length_mm, body_mass_g)
+
+visdat::vis_cor(penguins_num)
+```
+
 ### Further reading
 - naniar package for missing values: https://github.com/njtierney/naniar
