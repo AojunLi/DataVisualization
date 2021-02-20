@@ -1,0 +1,28 @@
+---
+title: "Density Plot"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+# change figure resolution
+knitr::opts_chunk$set(dpi=300)
+
+# load packages
+library(palmerpenguins)
+library(ggplot2)
+```
+
+### Density plot with ggplot
+```{r density, warning=FALSE}
+density <- ggplot(data = penguins) +
+  geom_density(aes(x = bill_length_mm, 
+                   y = ..density..,
+                   fill = species),
+               alpha = 0.5)
+
+
+density
+```
+
+### Notes
+- A **density plot** is a representation of the distribution of a numeric variable. It is a **smoothed version** of the **histogram**.

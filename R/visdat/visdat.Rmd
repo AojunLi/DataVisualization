@@ -7,6 +7,7 @@ output: html_document
 # change figure resolution
 knitr::opts_chunk$set(dpi=300)
 
+# load packages
 library(palmerpenguins)
 library(visdat)
 library(tidyverse)

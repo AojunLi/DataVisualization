@@ -8,12 +8,13 @@ output: html_document
 # change figure resolution
 knitr::opts_chunk$set(dpi=300)
 
+# load packages
 library(palmerpenguins)
 library(ggplot2)
 ```
 
 ### Violin plot with ggplot
-```{r vis_vio, warning=FALSE}
+```{r violin, warning=FALSE}
 violin <- ggplot(data = penguins) +
   geom_violin(aes(x = species, 
                   y = bill_length_mm, 
