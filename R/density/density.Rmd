@@ -26,3 +26,6 @@ density
 
 ### Notes
 - A **density plot** is a representation of the distribution of a numeric variable. It is a **smoothed version** of the **histogram**.
+
+### Further reading
+- Kernel Density Estimation: https://rdrr.io/r/stats/density.html

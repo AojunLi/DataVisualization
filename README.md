@@ -11,8 +11,8 @@
 ## Graph gallery
 
 - Visualize dataframe
-
   - [visdata](https://github.com/ropensci/visdat)
-  
 - Violin Chart
+- Overlaying Plots
+  - marginal distribution
 
