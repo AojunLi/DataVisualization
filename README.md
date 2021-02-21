@@ -16,8 +16,11 @@
 - Density Plot
 - Histogram
 - Ridgeline Plot
+- Scatter Plot
 - Violin Chart
 - Overlaying Plots
-  - marginal distribution
   - boxplot with jitter
+  - marginal distribution
+  - scatter plot with rug
+  - scatter plot with linear model and confidence interval
 

@@ -1,0 +1,24 @@
+---
+title: "Scatter Plot"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+# change figure resolution
+knitr::opts_chunk$set(dpi=300)
+
+# load packages
+library(palmerpenguins)
+library(ggplot2)
+```
+
+### Scatter plot with ggplot
+```{r scatter, warning=FALSE}
+scatter <- ggplot(data = penguins) +
+  geom_point(aes(x = flipper_length_mm,
+                 y = body_mass_g,
+                 color = species))
+
+
+scatter
+```

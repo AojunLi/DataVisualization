@@ -37,3 +37,34 @@ boxplot_jitter <- ggplot(data = penguins,
 
 boxplot_jitter
 ```
+
+### Scatter plot with rug
+Adding rug gives insight about variable distribution
+```{r rug, warning=FALSE}
+rug <- ggplot(data = penguins,
+              aes(x = flipper_length_mm,
+                  y = body_mass_g)) +
+  geom_point() +
+  geom_rug(col="steelblue",
+           alpha=0.1, 
+           size=1.5)
+
+rug
+```
+
+### Scatter plot with linear model and confidence interval
+The `method` argument allows to apply different smoothing method like glm, loess and more. 
+```{r lm, warning=FALSE}
+lm <- ggplot(data = penguins,
+             aes(x = flipper_length_mm,
+                 y = body_mass_g)) +
+  geom_point() +
+  geom_smooth(method=lm,
+              formula = y ~ x,
+              color="red", 
+              fill="#69b3a2", 
+              se=TRUE)
+
+lm
+```
+
