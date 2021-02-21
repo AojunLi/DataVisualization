@@ -1,0 +1,42 @@
+---
+title: "Boxplot"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+# change figure resolution
+knitr::opts_chunk$set(dpi=300)
+
+# load packages
+library(palmerpenguins)
+library(ggplot2)
+library(tidyverse)
+```
+
+### Boxplot with ggplot
+```{r Boxplot, warning=FALSE}
+# add variable to highlight a group
+penguins_hl <- penguins %>% 
+  mutate(highlight = ifelse(species == "Chinstrap", "Y", "N"))
+
+boxplot <- ggplot(data = penguins_hl) +
+  geom_boxplot(aes(x = species,
+                   y = bill_length_mm,
+                   fill = highlight),
+               varwidth = TRUE) +
+  scale_fill_manual(values=c("grey", "slateblue")) +
+  theme(legend.position = "none")
+
+boxplot
+```
+
+### Notes
+- Boxplot anatomy ([Image source](https://www.leansigmacorporation.com/box-plot-with-minitab/))
+
+```{r anatomy, echo = FALSE}
+knitr::include_graphics("../boxplot/Box Plot Anatomy.png")
+```
+
+- A boxplot summarizes the distribution of a continuous variable. it is often criticized for **hiding the underlying distribution** of each group. Thus, showing individual observation using **jitter** on top of boxes is a good practice.
+
+- use `varwidth` option to make box widths proportional to sample size

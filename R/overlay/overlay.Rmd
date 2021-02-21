@@ -26,3 +26,14 @@ margin_densigram <- ggExtra::ggMarginal(scatter,
 
 margin_densigram
 ```
+
+### Boxplot with jitter
+```{r Boxplot, warning=FALSE}
+boxplot_jitter <- ggplot(data = penguins,
+                         aes(x = species,
+                             y = bill_length_mm)) +
+  geom_boxplot() +
+  geom_jitter()
+
+boxplot_jitter
+```

@@ -15,4 +15,5 @@
 - Violin Chart
 - Overlaying Plots
   - marginal distribution
+  - boxplot with jitter
 
