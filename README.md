@@ -12,6 +12,10 @@
 
 - Visualize dataframe
   - [visdata](https://github.com/ropensci/visdat)
+- Boxplot
+- Density Plot
+- Histogram
+- Ridgeline Plot
 - Violin Chart
 - Overlaying Plots
   - marginal distribution

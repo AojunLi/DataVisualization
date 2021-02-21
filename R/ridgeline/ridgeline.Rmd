@@ -1,0 +1,28 @@
+---
+title: "Ridgeline Plot"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+# change figure resolution
+knitr::opts_chunk$set(dpi=300)
+
+# load packages
+library(palmerpenguins)
+library(ggplot2)
+library(ggridges)
+```
+
+### Ridgeline plot with ggridges
+```{r ridge, warning=FALSE}
+ridge <- ggplot(data = penguins) +
+  geom_density_ridges_gradient(aes(x = bill_length_mm,
+                                   y = species,
+                                   fill = ..x..),
+                               bandwidth = 1)
+
+ridge
+```
+
+### Notes
+- For technical reasons, the geom_density_ridges_gradient() do not allow for alpha transparency in the fill.
