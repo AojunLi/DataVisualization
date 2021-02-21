@@ -1,0 +1,23 @@
+---
+title: "Histogram"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+# change figure resolution
+knitr::opts_chunk$set(dpi=300)
+
+# load packages
+library(palmerpenguins)
+library(ggplot2)
+```
+
+### Histogram with ggplot
+```{r histogram, warning=FALSE}
+histogram <- ggplot(data = penguins) +
+  geom_histogram(aes(x = bill_depth_mm),
+                 binwidth = 0.5)
+
+histogram
+```
+
