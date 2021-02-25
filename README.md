@@ -14,6 +14,7 @@
   - [visdata](https://github.com/ropensci/visdat)
 - Boxplot
 - Density Plot
+- Heatmap
 - Histogram
 - Ridgeline Plot
 - Scatter Plot
@@ -23,4 +24,8 @@
   - marginal distribution
   - scatter plot with rug
   - scatter plot with linear model and confidence interval
+  
+## To do
+- [Manhattan plot](https://www.r-graph-gallery.com/101_Manhattan_plot.html)
+- plotly
 

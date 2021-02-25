@@ -1,0 +1,25 @@
+---
+title: "Heatmap"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+# change figure resolution
+knitr::opts_chunk$set(dpi=300)
+
+# load packages
+library(ggplot2)
+library(tidyverse)
+```
+
+### Heatmap with ggplot
+```{r heatmap}
+heatmap <- ggplot(data = faithfuld) +
+  geom_tile(aes(x = waiting,
+                y = eruptions,
+                fill = density))
+
+
+heatmap
+```
+
