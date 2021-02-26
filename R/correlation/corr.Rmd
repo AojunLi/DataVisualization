@@ -1,0 +1,27 @@
+---
+title: "Correlation Plot"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+# change figure resolution
+knitr::opts_chunk$set(dpi=300)
+
+# load packages
+library(palmerpenguins)
+library(GGally)
+```
+
+### correlation plot with ggcorr
+
+```{r corr, warning=FALSE}
+# create dataframe with numeric values
+penguins_num <- penguins %>% 
+  dplyr::select(bill_length_mm, bill_depth_mm, flipper_length_mm, body_mass_g)
+
+ggcorr(penguins_num, 
+       method = c("pairwise", "pearson"),
+       label = TRUE,
+       size = 3.5) 
+```
+

@@ -13,6 +13,7 @@
 - Visualize dataframe
   - [visdata](https://github.com/ropensci/visdat)
 - Boxplot
+- Correlation Plot
 - Density Plot
 - Heatmap
 - Histogram
