@@ -11,6 +11,7 @@ knitr::opts_chunk$set(dpi=300)
 library(palmerpenguins)
 library(ggplot2)
 library(ggExtra)
+library(GGally)
 ```
 
 ### Marginal distribution with ggExtra
@@ -68,3 +69,13 @@ lm <- ggplot(data = penguins,
 lm
 ```
 
+### Scatterplot matrix with ggpairs
+Scatter plots of each pair of numeric variable are drawn on the left part of the figure. Pearson correlation is displayed on the right. Variable distribution is available on the diagonal.
+
+```{r ggpairs, warning=FALSE}
+# create dataframe with numeric values
+penguins_num <- penguins %>% 
+  dplyr::select(bill_length_mm, bill_depth_mm, flipper_length_mm, body_mass_g)
+
+ggpairs(penguins_num) 
+```
