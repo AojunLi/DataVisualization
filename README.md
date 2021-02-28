@@ -19,6 +19,7 @@
 - Histogram
 - Ridgeline Plot
 - Scatter Plot
+  - Bubble Plot
 - Violin Chart
 - Overlaying Plots
   - boxplot with jitter
@@ -27,7 +28,7 @@
   - scatter plot with linear model and confidence interval
   - scatterplot matrix
   
-## To do
+## ToDo
 - [Manhattan plot](https://www.r-graph-gallery.com/101_Manhattan_plot.html)
 - plotly
 

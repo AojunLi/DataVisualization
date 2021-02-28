@@ -22,3 +22,17 @@ scatter <- ggplot(data = penguins) +
 
 scatter
 ```
+
+### Bubble plot with ggplot
+A bubble chart is basically a scatterplot with a third numeric variable used for circle size.
+```{r bubble, warning=FALSE}
+bubble <- ggplot(data = penguins) +
+  geom_point(aes(x = flipper_length_mm,
+                 y = body_mass_g,
+                 color = species,
+                 size = bill_depth_mm),
+             alpha=0.5)
+
+
+bubble
+```
