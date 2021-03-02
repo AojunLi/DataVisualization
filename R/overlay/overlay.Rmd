@@ -71,7 +71,6 @@ lm
 
 ### Scatterplot matrix with ggpairs
 Scatter plots of each pair of numeric variable are drawn on the left part of the figure. Pearson correlation is displayed on the right. Variable distribution is available on the diagonal.
-
 ```{r ggpairs, warning=FALSE}
 # create dataframe with numeric values
 penguins_num <- penguins %>% 
@@ -79,3 +78,20 @@ penguins_num <- penguins %>%
 
 ggpairs(penguins_num) 
 ```
+
+### Scatter plot with line plot
+```{r line, warning=FALSE}
+# create dataframe with numeric values
+penguins_mean <- penguins %>% 
+  dplyr::group_by(year) %>% 
+  dplyr::summarise(body_mass_mean = mean(body_mass_g, na.rm = TRUE))
+
+line <- ggplot(data = penguins_mean,
+               aes(x = year,
+                   y = body_mass_mean)) +
+  geom_point() +
+  geom_line()
+
+line
+```
+
