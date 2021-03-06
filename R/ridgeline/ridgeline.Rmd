@@ -1,6 +1,7 @@
 ---
 title: "Ridgeline Plot"
-output: html_document
+output: 
+  rmdformats::readthedown  
 ---
 
 ```{r setup, include=FALSE}
@@ -13,7 +14,7 @@ library(ggplot2)
 library(ggridges)
 ```
 
-### Ridgeline plot with ggridges
+## Ridgeline plot with ggridges
 ```{r ridge, warning=FALSE}
 ridge <- ggplot(data = penguins) +
   geom_density_ridges_gradient(aes(x = bill_length_mm,
@@ -24,5 +25,5 @@ ridge <- ggplot(data = penguins) +
 ridge
 ```
 
-### Notes
+## Notes
 - For technical reasons, the geom_density_ridges_gradient() do not allow for alpha transparency in the fill.

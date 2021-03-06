@@ -1,6 +1,7 @@
 ---
 title: "Boxplot"
-output: html_document
+output: 
+  rmdformats::readthedown  
 ---
 
 ```{r setup, include=FALSE}
@@ -13,7 +14,7 @@ library(ggplot2)
 library(tidyverse)
 ```
 
-### Boxplot with ggplot
+## Boxplot with ggplot
 ```{r Boxplot, warning=FALSE}
 # add variable to highlight a group
 penguins_hl <- penguins %>% 
@@ -30,7 +31,7 @@ boxplot <- ggplot(data = penguins_hl) +
 boxplot
 ```
 
-### Notes
+## Notes
 - Boxplot anatomy ([Image source](https://www.leansigmacorporation.com/box-plot-with-minitab/))
 
 ```{r anatomy, echo = FALSE}

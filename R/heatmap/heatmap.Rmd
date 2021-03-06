@@ -1,6 +1,7 @@
 ---
 title: "Heatmap"
-output: html_document
+output: 
+  rmdformats::readthedown  
 ---
 
 ```{r setup, include=FALSE}
@@ -12,7 +13,7 @@ library(ggplot2)
 library(tidyverse)
 ```
 
-### Heatmap with ggplot
+## Heatmap with ggplot
 ```{r heatmap}
 heatmap <- ggplot(data = faithfuld) +
   geom_tile(aes(x = waiting,

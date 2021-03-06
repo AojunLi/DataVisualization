@@ -1,6 +1,7 @@
 ---
 title: "Histogram"
-output: html_document
+output: 
+  rmdformats::readthedown  
 ---
 
 ```{r setup, include=FALSE}
@@ -12,7 +13,7 @@ library(palmerpenguins)
 library(ggplot2)
 ```
 
-### Histogram with ggplot
+## Histogram with ggplot
 ```{r histogram, warning=FALSE}
 histogram <- ggplot(data = penguins) +
   geom_histogram(aes(x = bill_depth_mm),

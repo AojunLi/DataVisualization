@@ -1,6 +1,7 @@
 ---
 title: "Correlation Plot"
-output: html_document
+output: 
+  rmdformats::readthedown  
 ---
 
 ```{r setup, include=FALSE}
@@ -12,7 +13,7 @@ library(palmerpenguins)
 library(GGally)
 ```
 
-### correlation plot with ggcorr
+## Correlation plot with ggcorr
 
 ```{r corr, warning=FALSE}
 # create dataframe with numeric values

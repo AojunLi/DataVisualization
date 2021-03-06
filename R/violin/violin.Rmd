@@ -1,6 +1,7 @@
 ---
 title: "Violin Plot"
-output: html_document
+output: 
+  rmdformats::readthedown 
 ---
 
 
@@ -13,7 +14,7 @@ library(palmerpenguins)
 library(ggplot2)
 ```
 
-### Violin plot with ggplot
+## Violin plot with ggplot
 ```{r violin, warning=FALSE}
 violin <- ggplot(data = penguins) +
   geom_violin(aes(x = species, 
@@ -23,5 +24,5 @@ violin <- ggplot(data = penguins) +
 violin
 ```
 
-### Notes
+## Notes
 - **Violins** are particularly adapted when the amount of **data is huge** and showing individual observations gets impossible. For **small datasets**, a **boxplot with jitter** is probably a better option since it really shows all the information.

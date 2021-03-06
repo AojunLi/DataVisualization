@@ -1,6 +1,7 @@
 ---
 title: "visdat"
-output: html_document
+output: 
+  rmdformats::readthedown 
 ---
 
 ```{r setup, include=FALSE}
@@ -13,13 +14,13 @@ library(visdat)
 library(tidyverse)
 ```
 
-### Visualize dataframe
+## Visualize dataframe
 
 ```{r vis_dat}
 visdat::vis_dat(penguins)
 ```
 
-### Visualize missing data
+## Visualize missing data
 ```{r vis_miss}
 visdat::vis_miss(penguins)
 
@@ -30,7 +31,7 @@ visdat::vis_miss(penguins, cluster = TRUE)
 visdat::vis_miss(penguins, sort_miss = TRUE)
 ```
 
-### Compare dataframes with <span style="color: red;">same dimension</span>.
+## Compare dataframes with <span style="color: red;">same dimension</span>
 ```{r vis_compare}
 # change penguins data for comparison
 penguins_diff <- penguins %>%
@@ -40,7 +41,7 @@ penguins_diff <- penguins %>%
 visdat::vis_compare(penguins, penguins_diff)
 ```
 
-### Visualize certain conditions
+## Visualize certain conditions
 ```{r vis_expect}
 # check dataframe
 visdat::vis_expect(penguins, ~.x >= 50)
@@ -49,7 +50,7 @@ visdat::vis_expect(penguins, ~.x >= 50)
 visdat::vis_expect(penguins["bill_length_mm"], ~.x >= 50)
 ```
 
-### Visualize correlation
+## Visualize correlation
 ```{r vis_cor}
 # create dataframe with numeric values
 penguins_num <- penguins %>% 
@@ -58,5 +59,5 @@ penguins_num <- penguins %>%
 visdat::vis_cor(penguins_num)
 ```
 
-### Further reading
+## Further reading
 - naniar package for missing values: https://github.com/njtierney/naniar

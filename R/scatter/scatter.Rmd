@@ -1,6 +1,7 @@
 ---
 title: "Scatter Plot"
-output: html_document
+output: 
+  rmdformats::readthedown  
 ---
 
 ```{r setup, include=FALSE}
@@ -12,7 +13,7 @@ library(palmerpenguins)
 library(ggplot2)
 ```
 
-### Scatter plot with ggplot
+## Scatter plot with ggplot
 ```{r scatter, warning=FALSE}
 scatter <- ggplot(data = penguins) +
   geom_point(aes(x = flipper_length_mm,
@@ -23,7 +24,7 @@ scatter <- ggplot(data = penguins) +
 scatter
 ```
 
-### Bubble plot with ggplot
+## Bubble plot with ggplot
 A bubble chart is basically a scatterplot with a third numeric variable used for circle size.
 ```{r bubble, warning=FALSE}
 bubble <- ggplot(data = penguins) +

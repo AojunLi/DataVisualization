@@ -1,6 +1,7 @@
 ---
 title: "Overlaying Plot"
-output: html_document
+output: 
+  rmdformats::readthedown  
 ---
 
 ```{r setup, include=FALSE}
@@ -14,7 +15,7 @@ library(ggExtra)
 library(GGally)
 ```
 
-### Marginal distribution with ggExtra
+## Marginal distribution with ggExtra
 ```{r ggExtra, warning=FALSE}
 scatter <- ggplot(data = penguins) +
   geom_point(aes(x = flipper_length_mm,
@@ -28,7 +29,7 @@ margin_densigram <- ggExtra::ggMarginal(scatter,
 margin_densigram
 ```
 
-### Boxplot with jitter
+## Boxplot with jitter
 ```{r Boxplot, warning=FALSE}
 boxplot_jitter <- ggplot(data = penguins,
                          aes(x = species,
@@ -39,7 +40,7 @@ boxplot_jitter <- ggplot(data = penguins,
 boxplot_jitter
 ```
 
-### Scatter plot with rug
+## Scatter plot with rug
 Adding rug gives insight about variable distribution
 ```{r rug, warning=FALSE}
 rug <- ggplot(data = penguins,
@@ -53,7 +54,7 @@ rug <- ggplot(data = penguins,
 rug
 ```
 
-### Scatter plot with linear model and confidence interval
+## Scatter plot with linear model and confidence interval
 The `method` argument allows to apply different smoothing method like glm, loess and more. 
 ```{r lm, warning=FALSE}
 lm <- ggplot(data = penguins,
@@ -69,7 +70,7 @@ lm <- ggplot(data = penguins,
 lm
 ```
 
-### Scatterplot matrix with ggpairs
+## Scatterplot matrix with ggpairs
 Scatter plots of each pair of numeric variable are drawn on the left part of the figure. Pearson correlation is displayed on the right. Variable distribution is available on the diagonal.
 ```{r ggpairs, warning=FALSE}
 # create dataframe with numeric values
@@ -79,7 +80,7 @@ penguins_num <- penguins %>%
 ggpairs(penguins_num) 
 ```
 
-### Scatter plot with line plot
+## Scatter plot with line plot
 ```{r line, warning=FALSE}
 # create dataframe with numeric values
 penguins_mean <- penguins %>% 
