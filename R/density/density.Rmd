@@ -25,6 +25,18 @@ density <- ggplot(data = penguins) +
 density
 ```
 
+## 2d Density plot with geom_density_2d
+```{r density_2d, warning=FALSE}
+density_2d <- ggplot(data = penguins) +
+  stat_density_2d(aes(x = bill_depth_mm,
+                      y = body_mass_g,
+                      fill = ..level..),
+                  geom = "polygon")
+
+
+density_2d
+```
+
 ## Notes
 - A **density plot** is a representation of the distribution of a numeric variable. It is a **smoothed version** of the **histogram**.
 

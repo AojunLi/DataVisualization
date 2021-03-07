@@ -11,9 +11,10 @@ knitr::opts_chunk$set(dpi=300)
 # load packages
 library(palmerpenguins)
 library(ggplot2)
+library(hexbin)
 ```
 
-## Histogram with ggplot
+## Histogram with geom_histogram
 ```{r histogram, warning=FALSE}
 histogram <- ggplot(data = penguins) +
   geom_histogram(aes(x = bill_depth_mm),
@@ -22,3 +23,22 @@ histogram <- ggplot(data = penguins) +
 histogram
 ```
 
+## 2d Histogram with geom_bin2d
+```{r histogram_2d, warning=FALSE}
+histogram_2d <- ggplot(data = penguins) +
+  geom_bin2d(aes(x = bill_depth_mm,
+                 y = body_mass_g),
+             bins = 20)
+
+histogram_2d
+```
+
+## Hexbin chart with geom_hex
+```{r hexbin, warning=FALSE}
+hexbin <- ggplot(data = penguins) +
+  geom_hex(aes(x = bill_depth_mm,
+               y = body_mass_g),
+           bins = 20)
+
+hexbin
+```

@@ -17,6 +17,7 @@
 - Density Plot
 - Heatmap
 - Histogram
+  - 2d Histogram
 - Ridgeline Plot
 - Scatter Plot
   - Bubble Plot
